@@ -1,0 +1,9 @@
+<%=render "shared/navbar", right_el: "menu", left_el: "search", title: "CATEGORIES"%>
+    <ul class="category-list d-flex flex-column align-items-center m-auto  p-3">
+        <%for a in 0..3 do%>
+            <%=link_to "/categorys/1/", class:"w-100 link-to-item" do%>
+                <%= render "categorys/shared/category"%>
+            <%end%>
+        <%end%>
+    </ul>
+<%=render "shared/add_new", type: "category"%>

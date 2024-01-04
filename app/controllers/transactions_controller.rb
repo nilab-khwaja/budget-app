@@ -4,4 +4,6 @@ class TransactionsController < ApplicationController
     @rigth_el = 'back'
     @left = 'none'
   end
+
+  def new; end
 end
