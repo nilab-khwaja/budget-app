@@ -12,8 +12,8 @@ gem 'sprockets-rails'
 gem 'pg', '~> 1.1'
 gem 'rubocop', '>= 1.0', '< 2.0'
 # Use sqlite3 as the database for Active Record
+gem 'faker', '~> 3.2'
 gem 'sqlite3', '~> 1.4'
-
 # Use the Puma web server [https://github.com/puma/puma]
 gem 'puma', '>= 5.0'
 
