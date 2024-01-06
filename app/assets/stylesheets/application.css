@@ -108,7 +108,8 @@
   width: 200px;
   height: 200px;
 }
-.user-avatar img{
+
+.user-avatar img {
   width: 100%;
   background-color: #3778c2;
   border-radius: 50%;
