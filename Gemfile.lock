@@ -280,7 +280,7 @@ DEPENDENCIES
   bootsnap
   capybara
   debug
-  devise (~> 4.9)
+  devise (~> 4.9, >= 4.9.3)
   faker (~> 3.2)
   importmap-rails
   jbuilder

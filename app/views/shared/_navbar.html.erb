@@ -19,6 +19,10 @@
                     <%=link_to categorys_path do%>
                       <i class="bi bi-arrow-left-short text-light"></i>
                     <%end%>
+                    <%when "LOGIN", "REGISTER"%>
+                    <%=link_to auth_path do%>
+                      <i class="bi bi-arrow-left-short text-light"></i>
+                    <%end%>
               <%end%>
             </h1>
      <%end%>
@@ -49,7 +53,7 @@
 
     <h3 class="sidebar-user-name text-center mt-3"><%=@current_user.name%></h3>
     <div class="text-center mt-5">
-      <button class="btn btn-danger m-auto">Logout</button>
+      <%= link_to 'Logout', destroy_user_session_path, method: :delete, class: 'btn btn-danger m-auto' %>
     </div>
   </div>
 </div>

@@ -1,9 +1,12 @@
 Rails.application.routes.draw do
   devise_for :users
 
-  get "up" => "rails/health#show", as: :rails_health_check
+  get '/auth', to: 'auth#index'
 
-  # Defines the root path route ("/")
+  devise_scope :user do
+    delete '/users/sign_out', to: 'devise/sessions#destroy'
+  end
+
   root "categorys#index"
   resources :categorys, only: [:show, :index, :new, :create] do
     resources :transactions, only: [:new, :create]
