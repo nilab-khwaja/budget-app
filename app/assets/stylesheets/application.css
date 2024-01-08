@@ -28,6 +28,7 @@
 
 .navbar {
   background-color: #3778c2;
+  z-index: 2;
 }
 
 .none {
@@ -118,4 +119,15 @@
 .sidebar-user-name, .forgot-pass {
   color: #434b54ba;
   font-size: 18px;
+}
+
+.alert-component {
+  z-index: 100;
+}
+
+.alert-container {
+  position: absolute;
+  width: 100%;
+  max-width: 350px;
+  top: 30px;
 }

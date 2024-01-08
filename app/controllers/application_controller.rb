@@ -16,17 +16,19 @@ class ApplicationController < ActionController::Base
     return if user_signed_in?
 
     current_uri = request.env['PATH_INFO']
-    unless [auth_path, '/users/sign_in', '/users/sign_up', '/users/password/new',
-            user_password_path].include?(current_uri)
-      redirect_to auth_path
-    end
+    allowed_uris = [auth_path, '/users/sign_in', '/users/sign_up', '/users/password/new',
+                    user_password_path, categorys_path]
+
+    return if allowed_uris.include?(current_uri)
+
+    redirect_to auth_path
   end
 
   protected
 
   def configure_permitted_parameters
     devise_parameter_sanitizer.permit(:sign_up) do |user_params|
-      user_params.permit(:email, :password, :password_confirmation, :name)
+      user_params.permit(:name, :email, :password, :password_confirmation)
     end
   end
 end
