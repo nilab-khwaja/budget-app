@@ -17,7 +17,7 @@ class TransactionsController < ApplicationController
 
     if @transaction.save && @category_transaction.save
       params[:categorys]&.each do |category_id|
-          CategoryTransaction.create(expense: @transaction, category_id:)
+        CategoryTransaction.create(expense: @transaction, category_id:)
       end
       redirect_to category_path(params[:category_id]), notice: 'Transaction created successfully'
     else
