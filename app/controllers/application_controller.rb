@@ -13,13 +13,13 @@ class ApplicationController < ActionController::Base
   end
 
   def authenticate_user!
-    return if user_signed_in?
+    return if user_signed_in? || action_name == 'create'
 
     current_uri = request.env['PATH_INFO']
     allowed_uris = [auth_path, '/users/sign_in', '/users/sign_up', '/users/password/new',
                     user_password_path, categorys_path]
 
-    return if allowed_uris.include?(current_uri)
+    return if allowed_uris.include?(current_uri) || current_uri == new_user_registration_path
 
     redirect_to auth_path
   end
@@ -27,8 +27,6 @@ class ApplicationController < ActionController::Base
   protected
 
   def configure_permitted_parameters
-    devise_parameter_sanitizer.permit(:sign_up) do |user_params|
-      user_params.permit(:name, :email, :password, :password_confirmation)
-    end
+    devise_parameter_sanitizer.permit(:sign_up, keys: [:name])
   end
 end
