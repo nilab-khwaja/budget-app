@@ -104,8 +104,12 @@ Video: [link](https://www.loom.com/share/112271ebe480453187daa2ae44810dcd?sid=63
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 👥 Authors <a name="authors"></a>
+👤 **Nilab Khwajazada**
 
-👤 **Mahamadou Nouridine**
+- GitHub: [@nilab-khwaja](https://github.com/nilab-khwaja)
+- Twitter: [@nilab](https://x.com/NilabKhwajazada?t=hEkqy2CCNFOIfGtbmD2gLA&s=35)
+- LinkedIn: [@nilab-khwajazada](https://www.linkedin.com/in/nilab-khwajazada)
+
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
