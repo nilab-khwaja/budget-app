@@ -1,10 +1,14 @@
 <%=render "shared/navbar", right_el: "back", left_el: "none", title: "DETAILS"%>
-<div class="bg-light m-3 p-2">
-    <div class="category-head d-flex align-items-center">
-        <div class="img-container">
+<div class="bg-light m-3 p-2  cat-container">
+    <div class="category-head d-flex align-items-center justify-content-between">
+        <div class="img-container d-flex align-items-center ">
             <img src=<%=@category.icon%> class="img-thumbnail" alt="icon" style="width: 70px; height: 70px;">
+            <h3 class="ms-2"><%=@category.name%></h3>
         </div>
-        <h3 class="ms-2"><%=@category.name%></h3>
+        <div class="d-flex justify-content-between total-amount text-muted">
+        <h6>TOTAL AMOUNT:</h6>
+        <h6>$<%=@transactions.sum(:amount)%></h6>
+    </div>
     </div>
 
     <h3 class="transactions-list-title my-3">Transactions:</h3>
@@ -17,9 +21,5 @@
     <%if @transactions.empty?%>
         <p>This Category is empty!</p>
     <%end%>
-    <div class="d-flex justify-content-between total-amount">
-        <h3>TOTAL AMOUNT:</h3>
-        <h3>$<%=@transactions.sum(:amount)%></h3>
-    </div>
 </div>
 <%=render "shared/add_new", type: "transaction"%>
