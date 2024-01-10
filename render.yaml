@@ -1,0 +1,23 @@
+databases:
+  - name: budget_app_q04l
+    databaseName: budget_app_q04l
+    user: budget_app_q04l_user
+    plan: free
+
+services:
+  - type: web
+    name: budgetapp
+    runtime: ruby
+    plan: free
+    buildCommand: "./bin/render-build.sh"
+    # preDeployCommand: "./bin/rails db:migrate" # preDeployCommand only available on paid instance types
+    startCommand: "./bin/rails server"
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: budget_app_q04l
+          property: connectionString
+      - key: RAILS_MASTER_KEY
+        sync: false
+      - key: WEB_CONCURRENCY
+        value: 4 # sensible default

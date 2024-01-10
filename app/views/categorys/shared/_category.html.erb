@@ -1,0 +1,13 @@
+<div class="list-group bg-light cat">
+  <%= link_to category_path(category), class: "list-group-item list-group-item-action d-flex justify-content-between align-items-center" do %>
+    <div class="d-flex align-items-center gap-2">
+      <img src="<%= category.icon %>" class="img-thumbnail" alt="icon" style="width: 80px; height: 80px;">
+      <div class="ml-3">
+        <h6 class="mb-0"><%= category.name %></h6>
+      </div>
+    </div>
+    <div class="text-left">
+      <small class="text-muted">$<%= category.expenses.sum(:amount) %></small>
+    </div>
+  <% end %>
+</div>
