@@ -99,7 +99,7 @@ Deployment: [linkw](https://budgetapp-e2lj.onrender.com)
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🎞️ Presentation Video <a name="video"></a>
-Video: [link]()
+Video: [link](https://www.loom.com/share/112271ebe480453187daa2ae44810dcd?sid=63bfbbc5-2200-4eb8-8052-3345753d82b8)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
