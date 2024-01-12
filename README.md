@@ -37,8 +37,8 @@ The **Budget App**  Is an application build using ruby for keeping track between
 - Rails
 - Postgresql
 - HTML
-- CSS
-- Javascript
+- CSS /Bootstrap
+
 
 ### Key Features <a name="key-features"></a>
 
@@ -94,7 +94,7 @@ To run tests, run the following commands:
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🚀 Deployment <a name="Deployment"></a>
-Deployment: [linkw](https://budgetapp-e2lj.onrender.com)
+Deployment: [link](https://budgetapp-e2lj.onrender.com)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
